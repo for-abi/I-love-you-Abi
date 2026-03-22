@@ -186,6 +186,14 @@
         </div>
     </section>
 
+    <!-- RAIN SOUND TOGGLE (bottom right) -->
+    <div class="fixed bottom-8 right-8 z-[60]">
+        <button onclick="toggleRain()" id="rainBtn"
+                class="group flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/95 backdrop-blur-xl border border-emerald-700 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 transition-all shadow-2xl hover:scale-110">
+            <i id="rainIcon" class="fa-solid fa-cloud-rain text-3xl"></i>
+        </button>
+    </div>
+
     <!-- FOOTER -->
     <footer class="bg-black/70 py-16 border-t border-emerald-900">
         <div class="max-w-4xl mx-auto px-6 text-center">
@@ -195,10 +203,15 @@
             
             <div class="mt-16 text-xs opacity-50">
                 Made with endless love by your boyfriend • Host this for free on GitHub Pages<br>
-                Update anytime — every new leaf I add is another “only us, always & forever”
+                Soft chilly rain sound added just for our cozy vibe
             </div>
         </div>
     </footer>
+
+    <!-- CHILLY RAIN SOUND -->
+    <audio id="rainAudio" loop preload="none">
+        <source src="https://www.orangefreesounds.com/wp-content/uploads/2018/04/Gentle-rain-loop.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         // Floating leaves
@@ -221,6 +234,21 @@
         
         for (let i = 0; i < 15; i++) {
             setTimeout(createFloatingLeaf, i * 180);
+        }
+        
+        // Rain sound control
+        const rainAudio = document.getElementById('rainAudio');
+        const rainIcon = document.getElementById('rainIcon');
+        
+        function toggleRain() {
+            if (rainAudio.paused) {
+                rainAudio.volume = 0.35; // perfect soft chilly level
+                rainAudio.play();
+                rainIcon.classList.replace('fa-cloud-rain', 'fa-volume-high');
+            } else {
+                rainAudio.pause();
+                rainIcon.classList.replace('fa-volume-high', 'fa-cloud-rain');
+            }
         }
         
         // Hug function
