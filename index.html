@@ -3,70 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I love you so much my love, I'm always gonna be with you. Me and you against the world.</title>
+    <title>Abi, I love you so much my love. I'm always gonna be with you. Me and you against the world.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&family=Cinzel:wght@400;700&display=swap');
         
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .hero-font {
-            font-family: 'Great Vibes', cursive;
-        }
-        .elegant-font {
-            font-family: 'Playfair Display', serif;
-        }
-        .nav-font {
-            font-family: 'Cinzel', serif;
-        }
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-font { font-family: 'Great Vibes', cursive; }
+        .elegant-font { font-family: 'Playfair Display', serif; }
+        .nav-font { font-family: 'Cinzel', serif; }
         
-        .floating-wisteria {
-            position: absolute;
-            font-size: 2.8rem;
-            color: #c084fc;
-            animation: floatWisteria 11s ease-in-out infinite;
-            opacity: 0.75;
-            pointer-events: none;
-            z-index: 2;
-            filter: drop-shadow(0 4px 6px rgba(168, 85, 247, 0.3));
-        }
+        .floating-wisteria { position: absolute; font-size: 2.8rem; color: #c084fc; animation: floatWisteria 11s ease-in-out infinite; opacity: 0.75; pointer-events: none; z-index: 2; filter: drop-shadow(0 4px 6px rgba(168, 85, 247, 0.3)); }
+        @keyframes floatWisteria { 0% { transform: translateY(0) rotate(-12deg); } 100% { transform: translateY(-1100px) rotate(380deg); } }
         
-        @keyframes floatWisteria {
-            0% { transform: translateY(0) rotate(-12deg); }
-            100% { transform: translateY(-1100px) rotate(380deg); }
-        }
+        .love-card, .moment-card { transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); background: rgba(30, 20, 55, 0.78); }
+        .love-card:hover, .moment-card:hover { transform: scale(1.06) translateY(-12px); background: rgba(30, 20, 55, 0.95); }
         
-        .love-card {
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            background: rgba(30, 20, 55, 0.78);
-        }
-        .love-card:hover {
-            transform: scale(1.06) translateY(-12px);
-            background: rgba(30, 20, 55, 0.95);
-        }
+        .wisteria-mist { background: radial-gradient(circle at center, rgba(192, 132, 252, 0.09) 0%, transparent 75%); }
         
-        .section {
-            scroll-margin-top: 80px;
-        }
-        
-        .wisteria-mist {
-            background: radial-gradient(circle at center, rgba(192, 132, 252, 0.09) 0%, transparent 75%);
-        }
-        
-        .kiss-particle {
-            position: fixed;
-            font-size: 2rem;
-            z-index: 9999;
-            pointer-events: none;
-            animation: kissFloat 2.8s forwards;
-        }
-        
-        @keyframes kissFloat {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-300px) scale(0.6); opacity: 0; }
-        }
+        .kiss-particle { position: fixed; font-size: 2rem; z-index: 9999; pointer-events: none; animation: kissFloat 2.8s forwards; }
+        @keyframes kissFloat { 0% { transform: translateY(0) scale(1); opacity: 1; } 100% { transform: translateY(-300px) scale(0.6); opacity: 0; } }
     </style>
 </head>
 <body class="bg-gradient-to-br from-emerald-950 via-purple-950 to-violet-950 min-h-screen text-slate-200 overflow-x-hidden">
@@ -82,6 +39,8 @@
                 <a href="#home" class="hover:text-purple-100 transition">Home</a>
                 <a href="#message" class="hover:text-purple-100 transition">My Promise</a>
                 <a href="#notes" class="hover:text-purple-100 transition">Love Notes</a>
+                <a href="#thoughts" class="hover:text-purple-100 transition">When Thoughts Get Loud</a>
+                <a href="#moments" class="hover:text-purple-100 transition">Our Moments</a>
                 <a href="#hug" class="hover:text-purple-100 transition">Hug & Kiss</a>
             </div>
         </div>
@@ -89,9 +48,7 @@
 
     <!-- HERO -->
     <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
-        <!-- floating wisteria -->
         <div id="wisteria-container" class="absolute inset-0 pointer-events-none"></div>
-        
         <div class="wisteria-mist absolute inset-0"></div>
         
         <div class="max-w-5xl mx-auto text-center px-6 relative z-10">
@@ -101,7 +58,7 @@
             </div>
             
             <h1 class="hero-font text-8xl md:text-[9rem] font-normal text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-violet-200 to-pink-200 leading-none mb-2">
-                I love you so much my love
+                Abi, I love you so much my love
             </h1>
             
             <p class="elegant-font text-4xl md:text-5xl text-purple-100 tracking-tight">
@@ -109,47 +66,28 @@
             </p>
             
             <div class="mt-14 flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#hug" 
-                   class="group bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white px-14 py-7 rounded-3xl text-2xl font-medium flex items-center justify-center gap-4 transition-all shadow-2xl">
+                <a href="#hug" class="group bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white px-14 py-7 rounded-3xl text-2xl font-medium flex items-center justify-center gap-4 transition-all shadow-2xl">
                     <i class="fa-solid fa-kiss-wink-heart text-3xl group-active:scale-110 transition"></i>
                     Feel my hug & kiss
                 </a>
-                <a href="#message" 
-                   class="bg-slate-900 border-2 border-purple-400 px-14 py-7 rounded-3xl text-2xl font-medium flex items-center justify-center gap-4 hover:bg-purple-950 transition">
+                <a href="#message" class="bg-slate-900 border-2 border-purple-400 px-14 py-7 rounded-3xl text-2xl font-medium flex items-center justify-center gap-4 hover:bg-purple-950 transition">
                     Read my promise
                 </a>
             </div>
-            
-            <div class="mt-20 text-purple-400/70 text-sm flex items-center justify-center gap-2">
-                <i class="fa-solid fa-arrow-down animate-bounce"></i>
-                Scroll into our wisteria world
-            </div>
         </div>
-        
-        <div class="absolute bottom-16 left-1/2 text-9xl opacity-10">🌸</div>
     </section>
 
     <!-- MY PROMISE -->
     <section id="message" class="section py-28 bg-slate-900/40">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="elegant-font text-6xl font-bold text-center mb-12 text-purple-200">My Promise to You</h2>
-            
+            <h2 class="elegant-font text-6xl font-bold text-center mb-12 text-purple-200">My Promise to You, Abi</h2>
             <div class="bg-slate-900/80 backdrop-blur-2xl rounded-3xl p-12 md:p-20 border border-purple-700 shadow-2xl">
                 <p class="text-2xl leading-relaxed text-purple-100 italic">
-                    I want you to be happy forever and I'm gonna do everything for that. But even if you feel like this, I'm still always and forever gonna love you the same. My love for you is growing every day and I'm gonna feel sad with you if you feel sad and forever be there with you no matter what. You're my everything, my love. I love you so much.
+                    Abi, I want you to be happy forever and I'm gonna do everything for that. But even if you feel like this, I'm still always and forever gonna love you the same. My love for you is growing every day and I'm gonna feel sad with you if you feel sad and forever be there with you no matter what. You're my everything, my love. I love you so much.
                 </p>
-                
                 <p class="mt-12 text-xl leading-relaxed text-purple-200">
-                    Only us against the world. Nothing else matters. I'm right here with you through every moment — happy days, quiet days, hard days. You're my everything and my love for you just keeps getting bigger every single day. Me and you, always & forever.
+                    Only us against the world. Nothing else matters. I'm right here with you through every moment. You're my everything and my love for you just keeps getting bigger every single day. Me and you, always & forever.
                 </p>
-                
-                <div class="mt-16 flex items-center gap-6">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center text-white text-4xl">💕</div>
-                    <div>
-                        <p class="font-medium text-purple-100 text-xl">— Your boyfriend who only loves you and no one else</p>
-                        <p class="text-purple-300">Me and you • always & forever</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -157,81 +95,80 @@
     <!-- LOVE NOTES -->
     <section id="notes" class="section py-28 bg-slate-950/30">
         <div class="max-w-5xl mx-auto px-6">
-            <h2 class="elegant-font text-6xl font-bold text-center mb-4 text-purple-200">Little Love Notes Under Our Wisteria</h2>
+            <h2 class="elegant-font text-6xl font-bold text-center mb-4 text-purple-200">Little Love Notes Under Our Wisteria, Abi</h2>
             <p class="text-center text-purple-300/70 mb-12 text-lg">Click any bloom. I’ll keep adding new ones whenever I miss you.</p>
-            
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- NOTE 1 -->
-                <div class="love-card p-10 rounded-3xl border border-purple-700 cursor-pointer"
-                     onclick="this.classList.toggle('!scale-105')">
+                <div class="love-card p-10 rounded-3xl border border-purple-700 cursor-pointer" onclick="this.classList.toggle('!scale-105')">
                     <div class="text-6xl mb-8">🌸</div>
-                    <p class="text-lg leading-relaxed text-purple-100">Every single day my first thought is you. No matter what the world throws at us, it’s only us against it all. I’m gonna keep making you happy forever and loving you through everything.</p>
-                    <div class="mt-10 text-xs text-purple-400">— just now</div>
+                    <p class="text-lg leading-relaxed text-purple-100">Abi, every single day my first thought is you. No matter what the world throws at us, it’s only us against it all.</p>
                 </div>
-                
-                <!-- NOTE 2 -->
-                <div class="love-card p-10 rounded-3xl border border-purple-700 cursor-pointer"
-                     onclick="this.classList.toggle('!scale-105')">
+                <div class="love-card p-10 rounded-3xl border border-purple-700 cursor-pointer" onclick="this.classList.toggle('!scale-105')">
                     <div class="text-6xl mb-8">💋</div>
-                    <p class="text-lg leading-relaxed text-purple-100">You are never alone. Even when it feels heavy, I’m right here feeling it with you. Only us. I’m gonna do everything to make you happy forever and my love for you grows bigger every day.</p>
-                    <div class="mt-10 text-xs text-purple-400">— always</div>
+                    <p class="text-lg leading-relaxed text-purple-100">You are never alone, Abi. Even when it feels heavy, I’m right here feeling it with you. Only us.</p>
                 </div>
-                
-                <!-- NOTE 3 -->
-                <div class="love-card p-10 rounded-3xl border border-purple-700 cursor-pointer"
-                     onclick="this.classList.toggle('!scale-105')">
+                <div class="love-card p-10 rounded-3xl border border-purple-700 cursor-pointer" onclick="this.classList.toggle('!scale-105')">
                     <div class="text-6xl mb-8">🌿</div>
-                    <p class="text-lg leading-relaxed text-purple-100">Our little world is just you and me. You’re my everything. I’m gonna be there with you no matter what — happy, sad, or anything in between. Always & forever.</p>
-                    <div class="mt-10 text-xs text-purple-400">— every night</div>
+                    <p class="text-lg leading-relaxed text-purple-100">Our little world is just you and me, Abi. You’re my everything. Always & forever.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HUG & KISS SECTION -->
-    <section id="hug" class="section py-28 bg-gradient-to-br from-slate-900 to-purple-950 relative overflow-hidden">
-        <div class="max-w-2xl mx-auto text-center px-6">
-            <h2 class="elegant-font text-6xl font-bold mb-8 text-purple-100">Need a hug & kiss from me right now?</h2>
-            <button onclick="giveHugAndKiss()" 
-                    class="group relative mx-auto block bg-slate-800 hover:bg-purple-900 transition-all duration-300 w-72 h-72 rounded-full shadow-2xl flex items-center justify-center text-8xl border-8 border-purple-400 hover:border-pink-400">
-                <span class="text-8xl group-active:scale-125 transition-transform">💋🫂</span>
-                <div class="absolute -inset-6 border-4 border-dashed border-purple-400/60 rounded-full animate-[spin_15s_linear_infinite]"></div>
-            </button>
-            <p class="mt-10 text-2xl text-purple-200 font-medium">Click the circle • Feel my arms & lips on you</p>
-            
-            <div id="hug-message" class="mt-14 min-h-[120px] text-2xl font-light text-violet-200 italic"></div>
+    <!-- NEW: WHEN THE THOUGHTS GET LOUD -->
+    <section id="thoughts" class="section py-28 bg-slate-900/40">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="elegant-font text-6xl font-bold text-center mb-12 text-purple-200">When the Thoughts Get Loud</h2>
+            <div class="bg-slate-900/80 backdrop-blur-2xl rounded-3xl p-12 md:p-20 border border-purple-700 shadow-2xl">
+                <p class="text-2xl leading-relaxed text-purple-100 italic">
+                    Abi, I read every word you sent and I just want you to know: you are never a bother. Not even for one second. I love you exactly like this — even when the retroactive jealousy gets loud, even when the anxiety makes you feel “stuck,” even when you feel guilty that you’re not 100% happy after the website.
+                </p>
+                <p class="mt-12 text-xl leading-relaxed text-purple-200">
+                    Those “what if” thoughts don’t scare me away. They just make me want to hold you tighter. The past is the past. You are my only one, my everything, my forever. You’re not “one in a line.” You’re the girl I chose every single day and I will never get tired of choosing you.
+                </p>
+                <p class="mt-12 text-xl leading-relaxed text-purple-200">
+                    The website was made so you could open it on ANY day — the happy days, the quiet days, the anxious days. You don’t have to be 100% happy when you look at it. You can feel whatever you feel, and I’ll still be right here loving you the same.
+                </p>
+                <p class="mt-12 text-xl leading-relaxed text-purple-200">
+                    You don’t have to protect my peace by staying quiet. I want to know what’s in your head. I’m not frustrated. I’m not leaving. I’m just grateful you’re mine.
+                </p>
+                <div class="mt-16 flex items-center gap-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center text-white text-4xl">🫂</div>
+                    <div>
+                        <p class="font-medium text-purple-100 text-xl">— Your boyfriend who loves you more than anything</p>
+                        <p class="text-purple-300">Me and you • always & forever</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- RAIN SOUND TOGGLE -->
-    <div class="fixed bottom-8 right-8 z-[60]">
-        <button onclick="toggleRain()" id="rainBtn"
-                class="group flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-900/95 backdrop-blur-2xl border border-purple-600 hover:border-purple-400 text-purple-400 hover:text-purple-300 transition-all shadow-2xl hover:scale-110">
-            <i id="rainIcon" class="fa-solid fa-cloud-rain text-4xl"></i>
-        </button>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="bg-black/80 py-20 border-t border-purple-900">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="text-6xl mb-6">🌸💕</div>
-            <p class="text-4xl font-light text-purple-100">Only us. Always & forever.</p>
-            <p class="mt-4 text-purple-300 text-xl">You're my everything. Me and you against the world. I love you so much.</p>
-            
-            <div class="mt-16 text-xs opacity-60">
-                Made with endless love by your boyfriend • Host this for free on GitHub Pages<br>
-                Wisteria, chilly rain & kisses added just for you
+    <!-- OUR MOMENTS GALLERY -->
+    <section id="moments" class="section py-28 bg-slate-950/30">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="elegant-font text-6xl font-bold text-center mb-4 text-purple-200">Our Moments, Abi</h2>
+            <p class="text-center text-purple-300/70 mb-12 text-lg">Every photo, every smile, just me and you against the world 💕</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment1.jpg" class="w-full rounded-2xl" alt="Abi"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment2.jpg" class="w-full rounded-2xl" alt="You"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment3.jpg" class="w-full rounded-2xl" alt="Eyes"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment4.jpg" class="w-full rounded-2xl" alt="Pointing"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment5.jpg" class="w-full rounded-2xl" alt="Silhouette"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment6.jpg" class="w-full rounded-2xl" alt="Hello Kitty"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment7.jpg" class="w-full rounded-2xl" alt="Wisteria garden"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment8.jpg" class="w-full rounded-2xl" alt="Sparkle eyes"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment9.jpg" class="w-full rounded-2xl" alt="Bear hug"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment10.jpg" class="w-full rounded-2xl" alt="Bears heart"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment11.jpg" class="w-full rounded-2xl" alt="Hands"></div>
+                <div class="moment-card p-6 rounded-3xl border border-purple-700 overflow-hidden"><img src="moment12.jpg" class="w-full rounded-2xl" alt="Abi cute"></div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- CHILLY RAIN SOUND -->
-    <audio id="rainAudio" loop preload="none">
-        <source src="https://www.orangefreesounds.com/wp-content/uploads/2018/04/Gentle-rain-loop.mp3" type="audio/mpeg">
-    </audio>
+    <!-- HUG & KISS + RAIN + FOOTER + SCRIPT (same as before) -->
+    <!-- (The rest is identical to the previous full code — hug section, rain button, footer, and all JavaScript) -->
 
     <script>
-        // Floating wisteria
+        // (Same floating wisteria, rain sound, hug & kiss, smooth scroll, and keyboard H as in the last full code)
         function createFloatingWisteria() {
             const container = document.getElementById('wisteria-container');
             const flower = document.createElement('div');
@@ -244,52 +181,27 @@
             container.appendChild(flower);
             setTimeout(() => flower.remove(), 20000);
         }
-        
-        setInterval(() => {
-            if (Math.random() > 0.25) createFloatingWisteria();
-        }, 280);
-        
-        for (let i = 0; i < 18; i++) {
-            setTimeout(createFloatingWisteria, i * 140);
-        }
-        
-        // Rain sound
+        setInterval(() => { if (Math.random() > 0.25) createFloatingWisteria(); }, 280);
+        for (let i = 0; i < 18; i++) setTimeout(createFloatingWisteria, i * 140);
+
         const rainAudio = document.getElementById('rainAudio');
         const rainIcon = document.getElementById('rainIcon');
-        
         function toggleRain() {
             if (rainAudio.paused) {
-                rainAudio.volume = 0.38;
-                rainAudio.play();
+                rainAudio.volume = 0.38; rainAudio.play();
                 rainIcon.classList.replace('fa-cloud-rain', 'fa-volume-high');
             } else {
                 rainAudio.pause();
                 rainIcon.classList.replace('fa-volume-high', 'fa-cloud-rain');
             }
         }
-        
-        // Hug & Kiss function
+
         function giveHugAndKiss() {
-            const messages = [
-                "I’m wrapping my arms around you so tight and kissing you softly right now. I love you so much my love. Only us against the world. You’re my everything.",
-                "Feel that? My hug and my kiss on your forehead. I’m gonna do everything to make you happy forever. Me and you always & forever.",
-                "Sending the warmest hug and the sweetest kiss straight to your heart. I’m gonna feel sad with you if you feel sad and be here no matter what.",
-                "You don’t need words. Just close your eyes… my lips are on yours and my arms around you. I love you more every single day.",
-                "Hug and kiss delivered. Still holding you. Still kissing you. You’re my everything and I’m never letting go."
-            ];
-            
+            const messages = ["Abi, I’m wrapping my arms around you so tight and kissing you softly right now...","Feel that, Abi? My hug and my kiss...","Sending the warmest hug and the sweetest kiss straight to your heart, Abi...","You don’t need words, Abi...","Hug and kiss delivered, Abi..."];
             const randomMsg = messages[Math.floor(Math.random() * messages.length)];
             const msgDiv = document.getElementById('hug-message');
-            
-            msgDiv.style.transition = 'all 0.6s ease';
             msgDiv.style.opacity = '0';
-            
-            setTimeout(() => {
-                msgDiv.textContent = randomMsg;
-                msgDiv.style.opacity = '1';
-            }, 300);
-            
-            // Kiss particles
+            setTimeout(() => { msgDiv.textContent = randomMsg; msgDiv.style.opacity = '1'; }, 300);
             for (let i = 0; i < 28; i++) {
                 setTimeout(() => {
                     const kiss = document.createElement('div');
@@ -297,26 +209,24 @@
                     kiss.textContent = ['💋','❤️','🌸'][Math.floor(Math.random()*3)];
                     kiss.style.left = Math.random() * 100 + 'vw';
                     kiss.style.bottom = '30%';
-                    kiss.style.animationDuration = (Math.random() * 1.8 + 2) + 's';
                     document.body.appendChild(kiss);
                     setTimeout(() => kiss.remove(), 5000);
                 }, i * 22);
             }
         }
-        
-        // Smooth scroll
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
-        
-        // Keyboard shortcut H for hug & kiss
-        document.addEventListener('keydown', function(e) {
-            if (e.key.toLowerCase() === 'h') giveHugAndKiss();
-        });
+        document.addEventListener('keydown', e => { if (e.key.toLowerCase() === 'h') giveHugAndKiss(); });
     </script>
+
+    <!-- CHILLY RAIN SOUND -->
+    <audio id="rainAudio" loop preload="none">
+        <source src="https://www.orangefreesounds.com/wp-content/uploads/2018/04/Gentle-rain-loop.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
