@@ -7,10 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
         
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         .hero-font {
             font-family: 'Playfair Display', serif;
@@ -118,12 +118,11 @@
             
             <div class="bg-slate-900/80 backdrop-blur rounded-3xl p-10 md:p-16 border border-violet-800 shadow-2xl">
                 <p class="text-2xl leading-relaxed text-slate-300 italic">
-                    You don’t have to explain why you feel like this.<br><br>
-                    You don’t have to be happy or energetic or even speak.<br><br>
-                    The world can feel heavy and you can just be quiet.<br><br>
-                    I’m still here — only us against everything else.<br>
-                    I love every version of you, especially the quiet one.<br><br>
-                    I’m your safe place. Always and forever.
+                    I want you to be happy forever and I'm gonna do everything for that. But even if you feel like this, I'm still always and forever gonna love you the same. My love for you is growing every day and I'm gonna feel sad with you if you feel sad and forever be there with you no matter what. You're my everything, my love. I love you so much.
+                </p>
+                
+                <p class="mt-10 text-xl text-emerald-200">
+                    Only us against the world. Nothing else matters. I'm right here with you through every moment — happy days, quiet days, hard days. You're my everything and my love for you just keeps getting bigger every single day.
                 </p>
                 
                 <div class="mt-12 flex items-center gap-4">
@@ -148,7 +147,7 @@
                 <div class="love-card p-8 rounded-3xl border border-emerald-700 cursor-pointer"
                      onclick="this.classList.toggle('!scale-105')">
                     <div class="text-5xl mb-6">🌿</div>
-                    <p class="text-lg leading-relaxed text-slate-200">Every single day my first thought is you. No matter what the world throws at us, it’s only us against it all.</p>
+                    <p class="text-lg leading-relaxed text-slate-200">Every single day my first thought is you. No matter what the world throws at us, it’s only us against it all. I’m gonna keep making you happy forever and loving you through everything.</p>
                     <div class="mt-8 text-xs text-emerald-400">— just now</div>
                 </div>
                 
@@ -156,7 +155,7 @@
                 <div class="love-card p-8 rounded-3xl border border-violet-700 cursor-pointer"
                      onclick="this.classList.toggle('!scale-105')">
                     <div class="text-5xl mb-6">🫂</div>
-                    <p class="text-lg leading-relaxed text-slate-200">You are never alone. Even from far away, I’m holding your hand through everything. Only us. Always.</p>
+                    <p class="text-lg leading-relaxed text-slate-200">You are never alone. Even when it feels heavy, I’m right here feeling it with you. Only us. I’m gonna do everything to make you happy forever and my love for you grows bigger every day.</p>
                     <div class="mt-8 text-xs text-violet-400">— always</div>
                 </div>
                 
@@ -164,7 +163,7 @@
                 <div class="love-card p-8 rounded-3xl border border-emerald-700 cursor-pointer"
                      onclick="this.classList.toggle('!scale-105')">
                     <div class="text-5xl mb-6">🌲</div>
-                    <p class="text-lg leading-relaxed text-slate-200">Our little world is just you and me. Nothing else matters. I’m right here with you, forever.</p>
+                    <p class="text-lg leading-relaxed text-slate-200">Our little world is just you and me. You’re my everything. I’m gonna be there with you no matter what — happy, sad, or anything in between. Always & forever.</p>
                     <div class="mt-8 text-xs text-emerald-400">— every night</div>
                 </div>
             </div>
@@ -186,7 +185,7 @@
         </div>
     </section>
 
-    <!-- RAIN SOUND TOGGLE (bottom right) -->
+    <!-- RAIN SOUND TOGGLE -->
     <div class="fixed bottom-8 right-8 z-[60]">
         <button onclick="toggleRain()" id="rainBtn"
                 class="group flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/95 backdrop-blur-xl border border-emerald-700 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 transition-all shadow-2xl hover:scale-110">
@@ -199,7 +198,7 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="text-5xl mb-6">🌿</div>
             <p class="text-3xl font-light text-slate-100">Only us. Always & forever.</p>
-            <p class="mt-4 text-emerald-300">No matter what the world feels like. I’m right here with you.</p>
+            <p class="mt-4 text-emerald-300">You’re my everything. I’m gonna do everything to make you happy forever and I’ll be right here with you no matter what.</p>
             
             <div class="mt-16 text-xs opacity-50">
                 Made with endless love by your boyfriend • Host this for free on GitHub Pages<br>
@@ -236,13 +235,13 @@
             setTimeout(createFloatingLeaf, i * 180);
         }
         
-        // Rain sound control
+        // Rain sound
         const rainAudio = document.getElementById('rainAudio');
         const rainIcon = document.getElementById('rainIcon');
         
         function toggleRain() {
             if (rainAudio.paused) {
-                rainAudio.volume = 0.35; // perfect soft chilly level
+                rainAudio.volume = 0.35;
                 rainAudio.play();
                 rainIcon.classList.replace('fa-cloud-rain', 'fa-volume-high');
             } else {
@@ -254,11 +253,11 @@
         // Hug function
         function giveHug() {
             const messages = [
-                "I’m wrapping my arms around you so tight right now. Only us. I’ve got you forever. ❤️",
-                "Feel that? That’s me holding you close — nothing else matters. Only us against the world.",
-                "Sending the warmest hug straight to your heart. You’re safe with me. Always & forever.",
-                "You don’t need words. Just close your eyes and feel me right here with you.",
-                "Hug delivered. Still holding on. Only us. Always."
+                "I’m wrapping my arms around you so tight right now. I want you to be happy forever and I’m gonna do everything for that. Only us against the world. I love you so much.",
+                "Feel that? That’s me holding you close — you’re my everything. My love for you grows every day. Only us, always & forever.",
+                "Sending the warmest hug straight to your heart. I’m gonna feel sad with you if you feel sad and be there no matter what. You’re my everything.",
+                "You don’t need words. Just close your eyes and feel me right here. I love you the same every single day — only us against the world.",
+                "Hug delivered. Still holding on. You’re my everything and I’m gonna make you happy forever."
             ];
             
             const randomMsg = messages[Math.floor(Math.random() * messages.length)];
